@@ -22,14 +22,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export',
+  basePath: '/LaunchifyDigital',
+  assetPrefix: '/LaunchifyDigital/',
+  trailingSlash: true,
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/Launchify-Digital' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Launchify-Digital/' : '',
 }
 
 if (userConfig) {
